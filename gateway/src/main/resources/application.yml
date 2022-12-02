@@ -8,7 +8,7 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: BoundedContext262
+        - id: inventory
           uri: http://localhost:8081
           predicates:
             - Path=/inventories/**, 
@@ -35,8 +35,8 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: BoundedContext262
-          uri: http://boundedContext262:8080
+        - id: inventory
+          uri: http://inventory:8080
           predicates:
             - Path=/inventories/**, 
         - id: frontend
